@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flashef — Disco Lights & Flash Effects</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    color: #fff;
+    background: radial-gradient(circle at 30% 20%, #6366F1 0%, transparent 40%),
+                radial-gradient(circle at 70% 70%, #EC4899 0%, transparent 40%),
+                radial-gradient(circle at 50% 90%, #2DD4BF 0%, transparent 40%),
+                #020617;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px; }
+  header { text-align: center; margin-bottom: 56px; }
+  .logo {
+    width: 120px; height: 120px; border-radius: 28px; margin: 0 auto 20px;
+    background: linear-gradient(135deg, #22D3EE, #A855F7, #EC4899);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 20px 60px rgba(168,85,247,.4);
+  }
+  .logo svg { width: 64px; height: 64px; fill: #fff; }
+  h1 { font-size: 44px; font-weight: 900; margin: 0 0 8px; letter-spacing: -0.5px; }
+  .tagline { color: rgba(255,255,255,.7); font-size: 18px; }
+  h2 { font-size: 24px; margin: 48px 0 12px; font-weight: 800; }
+  p { color: rgba(255,255,255,.85); }
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+  @media (max-width:520px){ .features{grid-template-columns:1fr} h1{font-size:34px} }
+  .card {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 16px; padding: 18px;
+  }
+  .card b { display: block; font-size: 15px; margin-bottom: 4px; }
+  .card span { color: rgba(255,255,255,.7); font-size: 14px; }
+  footer { margin-top: 80px; text-align: center; color: rgba(255,255,255,.5); font-size: 13px; }
+  a { color: #67E8F9; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .links { display: flex; gap: 20px; justify-content: center; margin-top: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 24 24"><path d="M14 3l-9 12h6l-1 6 9-12h-6l1-6z"/></svg>
+    </div>
+    <h1>Flashef</h1>
+    <p class="tagline">Disco lights & flash effects for iPhone</p>
+  </header>
+
+  <h2>What is Flashef?</h2>
+  <p>
+    Flashef turns your iPhone into a fun disco light with bold flash and color
+    effects. Choose from 14+ ready-made effects, sync to music with your
+    microphone, or build your own custom strobe.
+  </p>
+
+  <h2>Features</h2>
+  <div class="features">
+    <div class="card"><b>14+ Effects</b><span>Disco, Rave, Rainbow, Police, SOS, Heartbeat, Lightning, Candle, Neon and more</span></div>
+    <div class="card"><b>Music Sync</b><span>Reacts to live audio via the microphone</span></div>
+    <div class="card"><b>Custom Mode</b><span>Pick any color, set your strobe speed, tap to BPM</span></div>
+    <div class="card"><b>Live Activity</b><span>Control from Dynamic Island and Lock Screen</span></div>
+    <div class="card"><b>Apple Watch</b><span>Remote control from your wrist</span></div>
+    <div class="card"><b>Siri & Widgets</b><span>"Start disco in Flashef"</span></div>
+  </div>
+
+  <h2>Support</h2>
+  <p>
+    Have a question, suggestion or bug to report?
+    Email me at <a href="mailto:abirkan.aksoy@gmail.com">abirkan.aksoy@gmail.com</a>.
+    I read every message and try to reply within a couple of days.
+  </p>
+
+  <h2>Safety</h2>
+  <p>
+    ⚠️ Flashef contains intense flashing lights. <b>Do not use</b> if you have
+    photosensitive epilepsy or seizure disorders. Take breaks during long
+    sessions — strobe modes can heat your device.
+  </p>
+
+  <footer>
+    © 2026 Birkan Aksoy
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:abirkan.aksoy@gmail.com">Contact</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
