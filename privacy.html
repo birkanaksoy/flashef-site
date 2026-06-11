@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Privacy Policy — Hivelight</title>
+<title>Privacy Policy — Hivelight Party</title>
 <style>
   :root { color-scheme: dark; }
   body {
     margin: 0; font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
     color: #fff; background: #020617; min-height: 100vh;
   }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px; }
   h1 { font-size: 36px; font-weight: 900; margin: 0 0 8px; }
   .updated { color: rgba(255,255,255,.5); margin-bottom: 40px; font-size: 14px; }
   h2 { font-size: 20px; margin: 40px 0 10px; font-weight: 700; color: #A5F3FC; }
@@ -19,82 +19,128 @@
   ul { padding-left: 22px; }
   footer { margin-top: 80px; color: rgba(255,255,255,.5); font-size: 13px; text-align: center; }
   hr { border: 0; border-top: 1px solid rgba(255,255,255,.1); margin: 40px 0; }
+  code { background: rgba(255,255,255,.08); padding: 2px 6px; border-radius: 4px; font-size: 14px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Privacy Policy</h1>
-  <p class="updated">Effective: May 26, 2026</p>
+  <p class="updated">Effective: June 11, 2026</p>
 
   <p>
-    This Privacy Policy describes how the <b>Hivelight</b> iOS application
-    (the "App"), developed by Birkan Aksoy, handles user information.
+    This Privacy Policy describes how <b>Hivelight Party</b> (the "App"),
+    developed by Birkan Aksoy, handles user information. In short:
+    <b>we do not collect personal data, and audio never leaves your phone.</b>
   </p>
 
   <h2>1. Data We Collect</h2>
   <p>
-    <b>None.</b> Hivelight does not collect, store, share, or transmit any
-    personal information, usage data, analytics, identifiers, or device
-    information.
+    <b>None.</b> Hivelight Party does not collect, store, share, or transmit
+    any personal information, usage analytics, identifiers, advertising IDs,
+    or device fingerprints to any server controlled by us. We do not operate
+    a backend.
   </p>
 
-  <h2>2. Microphone Access</h2>
+  <h2>2. Microphone Access (Auto Mode)</h2>
   <p>
-    The App requests access to your device's microphone <b>only</b> when you
-    use the "Music Sync" effect. The microphone signal is processed locally
-    on your device in real time to estimate ambient audio level. The audio
-    is <b>never</b> recorded, stored, written to disk, or transmitted
-    anywhere. Microphone access is released as soon as you stop the effect.
+    The App requests microphone access <b>only</b> when the host turns on
+    "Auto Mode". The microphone signal is analysed on-device in real time
+    purely to detect beat and energy so the lights can react to the music
+    in the room. The audio is <b>never</b> recorded, saved to disk, sent over
+    the network, or shared with any third party. Microphone access stops as
+    soon as Auto Mode is turned off.
   </p>
 
-  <h2>3. Camera / Torch Access</h2>
+  <h2>3. Local Network &amp; Multipeer Connections</h2>
   <p>
-    Hivelight uses the camera framework <b>solely to control the LED torch</b>
-    for flash effects. The camera sensor is not activated and no images or
-    video are captured.
-  </p>
-
-  <h2>4. Data Stored on Your Device</h2>
-  <p>
-    Hivelight saves the following data locally on your device using Apple's
-    <code>UserDefaults</code>:
+    Hivelight Party uses Apple's <b>MultipeerConnectivity</b> framework over
+    Bluetooth and the local Wi-Fi network to synchronise nearby iPhones into
+    a single light show. Devices advertise and browse for each other using
+    a Bonjour service name (<code>_hivelight-party._tcp / ._udp</code>).
   </p>
   <ul>
-    <li>List of presets you marked as favorites</li>
-    <li>Onboarding completion flag</li>
-    <li>Counter for the in-app review prompt</li>
+    <li>Only devices in physical range can be discovered.</li>
+    <li>Connections are peer-to-peer and do not route through any server we control.</li>
+    <li>The only data exchanged is light-show state (selected mode, intensity, beat triggers, room code, optional emoji reactions, display name you choose).</li>
+    <li>No personal identifiers, contacts, location, or contents from other apps are accessed or shared.</li>
+  </ul>
+
+  <h2>4. Camera / Torch Access</h2>
+  <p>
+    Hivelight Party uses Apple's camera framework <b>solely to control the
+    LED torch</b> for flash and strobe effects. The camera sensor is not
+    activated, and no images or video are captured at any time.
+  </p>
+
+  <h2>5. Data Stored Locally on Your Device</h2>
+  <p>
+    The App saves the following locally using Apple's <code>UserDefaults</code>
+    and the app's sandboxed file storage:
+  </p>
+  <ul>
+    <li>Onboarding and first-launch flags</li>
+    <li>Your chosen display name and favorite light modes</li>
+    <li>Recent room codes for quick re-join</li>
+    <li>Local party history / recap entries (host device only)</li>
+    <li>Settings such as haptics, brightness, language and theme preferences</li>
+    <li>Launch telemetry kept on-device (last cold-start times, used for in-app diagnostics only)</li>
   </ul>
   <p>
     This data never leaves your device and is removed when you uninstall the App.
   </p>
 
-  <h2>5. Third-Party Services</h2>
+  <h2>6. In-App Purchases &amp; Subscriptions (Hivelight Pro)</h2>
   <p>
-    Hivelight does not integrate with any third-party analytics, advertising,
-    crash reporting, or tracking SDKs.
+    Hivelight Pro (monthly, yearly, lifetime) is sold through Apple's
+    <b>StoreKit</b>. All purchase, billing, and renewal information is
+    handled by Apple under Apple's privacy policy — we never see your payment
+    details. The App only receives a verified entitlement from Apple
+    confirming whether you have an active Pro subscription. You can manage
+    or cancel anytime in <i>Settings → Apple ID → Subscriptions</i>.
   </p>
 
-  <h2>6. Children's Privacy</h2>
+  <h2>7. Third-Party Services</h2>
   <p>
-    Hivelight does not collect any data from any user, including children
-    under 13.
+    Hivelight Party does <b>not</b> integrate any third-party analytics,
+    advertising, attribution, crash-reporting, or tracking SDKs. The only
+    Apple services used are MultipeerConnectivity, StoreKit, ActivityKit
+    (Live Activity / Dynamic Island), WidgetKit, and the standard system
+    frameworks required to run the app.
   </p>
 
-  <h2>7. Changes to This Policy</h2>
+  <h2>8. Children's Privacy</h2>
   <p>
-    If this policy changes in the future, the updated version will be
-    published at this URL with a new effective date.
+    Hivelight Party does not knowingly collect any data from any user,
+    including children under 13. The App is rated for general audiences but
+    may not be appropriate for very young children due to intense flashing
+    lights.
   </p>
 
-  <h2>8. Contact</h2>
+  <h2>9. Photosensitivity Notice</h2>
   <p>
-    For questions about this policy, contact
+    Hivelight Party contains intense flashing lights and strobe effects.
+    Do not use the App if you have photosensitive epilepsy or any seizure
+    disorder. This notice exists for your safety and is not related to data
+    collection.
+  </p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>
+    If this policy changes, the updated version will be published at this
+    URL with a new effective date. Material changes will also be announced
+    in the App.
+  </p>
+
+  <h2>11. Contact</h2>
+  <p>
+    For questions about this policy or to exercise any rights you may have
+    under applicable law (e.g. GDPR, CCPA), contact
     <a href="mailto:abirkan.aksoy@gmail.com">abirkan.aksoy@gmail.com</a>.
   </p>
 
   <hr>
   <footer>
-    © 2026 Birkan Aksoy · <a href="index.html">Back to Hivelight</a>
+    © 2026 Birkan Aksoy · <a href="index.html">Back to Hivelight Party</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a>
   </footer>
 </div>
 </body>

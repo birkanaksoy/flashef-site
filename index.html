@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hivelight — Group Light Shows & Music Sync</title>
+<title>Hivelight Party — Sync every phone into one light show</title>
+<meta name="description" content="Hivelight Party turns every phone in the room into one synchronised light show. 15 reactive modes, 10 party games, Apple Watch. iOS app.">
 <style>
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
@@ -16,7 +17,7 @@
                 #020617;
     min-height: 100vh;
   }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px; }
   header { text-align: center; margin-bottom: 56px; }
   .logo {
     width: 120px; height: 120px; border-radius: 28px; margin: 0 auto 20px;
@@ -26,7 +27,7 @@
   }
   .logo svg { width: 64px; height: 64px; fill: #fff; }
   h1 { font-size: 44px; font-weight: 900; margin: 0 0 8px; letter-spacing: -0.5px; }
-  .tagline { color: rgba(255,255,255,.7); font-size: 18px; }
+  .tagline { color: rgba(255,255,255,.78); font-size: 18px; margin: 0; }
   h2 { font-size: 24px; margin: 48px 0 12px; font-weight: 800; }
   p { color: rgba(255,255,255,.85); }
   .features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
@@ -37,10 +38,19 @@
   }
   .card b { display: block; font-size: 15px; margin-bottom: 4px; }
   .card span { color: rgba(255,255,255,.7); font-size: 14px; }
+  .pill { display: inline-block; padding: 4px 10px; border-radius: 999px;
+    background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12);
+    margin: 4px 4px 0 0; font-size: 13px; color: rgba(255,255,255,.85); }
+  .cta {
+    display: inline-block; margin-top: 12px; padding: 12px 22px; border-radius: 999px;
+    background: linear-gradient(135deg, #22D3EE, #A855F7); color: #fff; font-weight: 700;
+    text-decoration: none;
+  }
+  .cta:hover { opacity: .92; text-decoration: none; }
   footer { margin-top: 80px; text-align: center; color: rgba(255,255,255,.5); font-size: 13px; }
   a { color: #67E8F9; text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .links { display: flex; gap: 20px; justify-content: center; margin-top: 12px; }
+  .links { display: flex; gap: 20px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
 </style>
 </head>
 <body>
@@ -49,46 +59,74 @@
     <div class="logo">
       <svg viewBox="0 0 24 24"><path d="M14 3l-9 12h6l-1 6 9-12h-6l1-6z"/></svg>
     </div>
-    <h1>Hivelight</h1>
-    <p class="tagline">Group light shows & music sync for iPhone</p>
+    <h1>Hivelight Party</h1>
+    <p class="tagline">Turn every phone in the room into one synchronised light show.</p>
+    <p style="margin-top:24px;color:rgba(255,255,255,.6);font-size:14px;">For iPhone, iPad &amp; Apple Watch · iOS 17+</p>
   </header>
 
-  <h2>What is Hivelight?</h2>
+  <h2>What it is</h2>
   <p>
-    Hivelight is a social light-show app. Connect several iPhones in the same
-    room and they flash together as one — rainbow splits, waves that ripple
-    across the group, stadium effects and more. Add music sync that pulses your
-    phones to the beat, and a DJ-style set builder to choreograph the whole night.
+    Hivelight Party links up to <b>8 iPhones</b> over Bluetooth and Wi-Fi into a single
+    light show. Open a room, share a 6-digit code, and the room reacts to the
+    music together — auroras, bass drops, strobes, the works. No accounts, no
+    servers, no internet required.
   </p>
 
   <h2>Features</h2>
   <div class="features">
-    <div class="card"><b>Crowd Sync</b><span>Connect nearby phones for a synchronized group light show — no internet needed</span></div>
-    <div class="card"><b>Music Sync</b><span>Beat-accurate light pulses driven by the music around you</span></div>
-    <div class="card"><b>DJ Set Builder</b><span>Chain scenes with timing to choreograph an entire party</span></div>
-    <div class="card"><b>Live Activity</b><span>Control the show from the Dynamic Island and Lock Screen</span></div>
-    <div class="card"><b>Live Activity</b><span>Control the show from the Dynamic Island and Lock Screen</span></div>
-    <div class="card"><b>Light Shows</b><span>A library of ready-made scenes for parties, concerts and more</span></div>
+    <div class="card"><b>Every phone, one show</b><span>Up to 8 phones synced locally over Bluetooth and Wi-Fi. Guests join free.</span></div>
+    <div class="card"><b>15 reactive modes</b><span>Aurora, Sunset, Heart Sync, Pulse, Beat, Disco Ball, Fireworks, Strobe Storm and more.</span></div>
+    <div class="card"><b>Auto Mode</b><span>Mic listens to the room and the lights react to the beat. Audio never leaves your phone.</span></div>
+    <div class="card"><b>10 party games</b><span>Spin the Phone, Truth or Dare, Beat the Bass, Reaction Race, Pass the Bomb and more.</span></div>
+    <div class="card"><b>Host DJ booth</b><span>Instant Flash, Strobe and Blackout. Mood pills and a 15-mode strip.</span></div>
+    <div class="card"><b>Live Activity &amp; Apple Watch</b><span>Dynamic Island shows what's playing. Quick mood &amp; emoji reactions from your wrist.</span></div>
   </div>
+
+  <h2>The 15 light modes</h2>
+  <div>
+    <span class="pill">Aurora</span><span class="pill">Sunset</span><span class="pill">Candle</span>
+    <span class="pill">Lava Lamp</span><span class="pill">Galaxy</span><span class="pill">Heart Sync</span>
+    <span class="pill">Pulse</span><span class="pill">Beat</span><span class="pill">Spectrum</span>
+    <span class="pill">Disco Ball</span><span class="pill">Neon City</span><span class="pill">Fireworks</span>
+    <span class="pill">Bass Drop</span><span class="pill">Glitter Bomb</span><span class="pill">Strobe Storm</span>
+  </div>
+
+  <h2>The 10 party games</h2>
+  <div>
+    <span class="pill">Spin the Phone</span><span class="pill">Reaction Race</span><span class="pill">Odd One Out</span>
+    <span class="pill">Pass the Bomb</span><span class="pill">Beat the Bass</span><span class="pill">Truth or Dare</span>
+    <span class="pill">Most Likely To</span><span class="pill">Color Memory</span><span class="pill">Quick Draw</span>
+    <span class="pill">Roulette of Doom</span>
+  </div>
+
+  <h2>Free to join · Pro to host</h2>
+  <p>
+    Guests always join free. To host a room, subscribe to <b>Hivelight Pro</b> —
+    monthly, yearly (best value) or one-time lifetime. 7-day free trial on
+    subscriptions. Manage or cancel anytime from your Apple ID settings.
+  </p>
 
   <h2>Support</h2>
   <p>
-    Have a question, suggestion or bug to report?
-    Email me at <a href="mailto:abirkan.aksoy@gmail.com">abirkan.aksoy@gmail.com</a>.
-    I read every message and try to reply within a couple of days.
+    Question, suggestion, bug report? Email
+    <a href="mailto:abirkan.aksoy@gmail.com">abirkan.aksoy@gmail.com</a>.
+    I read every message and reply within a couple of days.
   </p>
 
   <h2>Safety</h2>
   <p>
-    ⚠️ Hivelight contains intense flashing lights. <b>Do not use</b> if you have
-    photosensitive epilepsy or seizure disorders. Take breaks during long
-    sessions — strobe modes can heat your device.
+    Hivelight Party contains intense flashing lights and strobe effects.
+    <b>Do not use</b> if you have photosensitive epilepsy or any seizure
+    disorder. Take breaks during long sessions — strobe modes warm the device.
+    Keep volumes moderate so the mic can hear the beat without distortion.
   </p>
 
   <footer>
     © 2026 Birkan Aksoy
     <div class="links">
       <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
       <a href="mailto:abirkan.aksoy@gmail.com">Contact</a>
     </div>
   </footer>
